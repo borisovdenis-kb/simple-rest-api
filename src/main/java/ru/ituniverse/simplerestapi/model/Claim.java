@@ -4,8 +4,10 @@ import java.io.Serializable;
 import java.util.Set;
 
 
-public class User implements Serializable {
+public class Claim implements Serializable {
     private static final long serialVersionUID = -6376834647869488865L;
+
+    private Long id;
 
     private String firstName;
 
@@ -15,11 +17,18 @@ public class User implements Serializable {
 
     private Integer age;
 
-    private Integer gender;
+    private Gender gender;
 
     private Set<Service> selectedServices;
 
-    public User() {
+    public Claim() {}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -54,11 +63,11 @@ public class User implements Serializable {
         this.age = age;
     }
 
-    public Integer getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(Integer gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
